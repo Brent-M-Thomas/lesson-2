@@ -8,7 +8,7 @@ app.use(cors());
 app.get('/*', function (req, res) {
   var path = req.originalUrl;
 
-  request('http://addb.absolutdrinks.com/' + path + '?apiKey=23311a636eb84606a031b1292272666b').pipe(res);
+  request('https://developer.forecast.io/' + path + '?apiKey=5cfe7655eca22173ee295c21dbc3108a').pipe(res);
 });
 
 app.listen(process.env.PORT || 3000);
