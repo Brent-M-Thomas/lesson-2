@@ -8,7 +8,7 @@ app.use(cors());
 app.get('/*', function (req, res) {
   var path = req.originalUrl;
 
-  request('https://api.forecast.io/forecast/5cfe7655eca22173ee295c21dbc3108a/' + path).pipe(res);
+  request('https://api.forecast.io/forecast/5cfe7655eca22173ee295c21dbc3108a' + path).pipe(res);
 });
 
 app.listen(process.env.PORT || 3000);
